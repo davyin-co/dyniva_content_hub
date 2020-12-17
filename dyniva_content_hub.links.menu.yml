@@ -1,0 +1,9 @@
+dyniva_content_hub.taxonomy_sync_form:
+  title: 'Dyniva Taxonomy Sync'
+  route_name: dyniva_content_hub.manage_taxonomy_sync
+  parent: system.admin_config_services
+
+dyniva_content_hub.json_sync_form:
+  title: 'Dyniva Json Content Sync'
+  route_name: dyniva_content_hub.manage_json_sync
+  parent: system.admin_config_services

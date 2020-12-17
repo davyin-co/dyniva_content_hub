@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies: {  }
+id: site
+label: Site
+entity_type: node
+bundle: site
+display_mode: default
+form_mode: default
+module_name: dyniva_core
+has_draft: null
+standalone: true
+plugins:
+  entity_clone: 0
+  translation: 0
+  message: 0
+  revision: 0

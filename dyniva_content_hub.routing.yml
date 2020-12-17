@@ -1,0 +1,21 @@
+dyniva_content_hub.taxonomy_sync_form:
+  path: '/admin/config/services/taxonomy_sync'
+  defaults:
+    _title: 'Dyniva Taxonomy Sync'
+    _form: '\Drupal\dyniva_content_hub\Form\TaxonomySyncForm'
+  requirements:
+    _permission: 'access administration pages'
+dyniva_content_hub.manage_taxonomy_sync:
+  path: '/manage/site/taxonomy_sync'
+  defaults:
+    _title: 'Site Taxonomy Sync'
+    _form: '\Drupal\dyniva_content_hub\Form\TaxonomySyncForm'
+  requirements:
+    _permission: 'manage ccms site'
+dyniva_content_hub.manage_json_sync:
+  path: '/manage/site/json_sync'
+  defaults:
+    _title: 'Site Json Content Sync'
+    _form: '\Drupal\dyniva_content_hub\Form\JsonSyncForm'
+  requirements:
+    _permission: 'manage ccms site'

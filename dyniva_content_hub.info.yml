@@ -1,0 +1,11 @@
+name: Dyniva Content Hub (Alpha)
+type: module
+description: Dyniva 内容聚合中心
+core: 8.x
+package: Dyniva
+dependencies:
+  - footable
+  - node
+  - options
+  - user
+  - dyniva_content_receiver

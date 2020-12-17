@@ -1,0 +1,5 @@
+checkboxes_all:
+  js:
+    js/checkboxes_all.js: {}
+  dependencies:
+    - core/drupal

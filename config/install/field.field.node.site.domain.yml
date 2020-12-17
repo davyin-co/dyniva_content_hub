@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.domain
+    - node.type.site
+id: node.site.domain
+field_name: domain
+entity_type: node
+bundle: site
+label: 域名
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

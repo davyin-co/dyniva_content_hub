@@ -1,0 +1,24 @@
+<?php
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Access\AccessResult;
+
+/**
+ * Implements hook_entity_presave().
+ * 
+ * @param EntityInterface $entity
+ */
+function dyniva_content_hub_entity_presave(EntityInterface $entity){
+  $site_uuid = \Drupal::request()->headers->get('X-Site-ID');
+  if($site_uuid){
+    $site = \Drupal::entityManager()->loadEntityByUuid('node', $site_uuid);
+    if($site){
+      if($entity->hasField('site_ref')) {
+        $entity->site_ref->target_id = $site->id();
+      }
+      if($entity->hasField('department')) {
+        $entity->department = $site->department;
+      }
+    }
+  }
+}

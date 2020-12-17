@@ -1,0 +1,13 @@
+dyniva_content_hub.manage_site.taxonomy_sync:
+  route_name: dyniva_content_hub.manage_taxonomy_sync
+  title: 'Taxonomy Sync'
+  class: '\Drupal\dyniva_core\Menu\LocalAction'
+  appears_on:
+    - view.manage_site.page_list
+
+dyniva_content_hub.manage_site.json_sync:
+  route_name: dyniva_content_hub.manage_json_sync
+  title: 'Json Content Sync'
+  class: '\Drupal\dyniva_core\Menu\LocalAction'
+  appears_on:
+    - view.manage_site.page_list
