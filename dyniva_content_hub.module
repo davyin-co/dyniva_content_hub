@@ -10,13 +10,13 @@ use Drupal\Core\Access\AccessResult;
  */
 function dyniva_content_hub_entity_presave(EntityInterface $entity){
   $site_uuid = \Drupal::request()->headers->get('X-Site-ID');
-  if($site_uuid){
+  if ($site_uuid){
     $site = \Drupal::entityManager()->loadEntityByUuid('node', $site_uuid);
-    if($site){
-      if($entity->hasField('site_ref')) {
+    if ($site){
+      if (method_exists($entity, 'hasField') && $entity->hasField('site_ref')) {
         $entity->site_ref->target_id = $site->id();
       }
-      if($entity->hasField('department')) {
+      if (method_exists($entity, 'hasField') && $entity->hasField('department')) {
         $entity->department = $site->department;
       }
     }
