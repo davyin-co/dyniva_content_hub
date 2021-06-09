@@ -16,7 +16,7 @@ function dyniva_content_hub_entity_presave(EntityInterface $entity){
       if (method_exists($entity, 'hasField') && $entity->hasField('site_ref')) {
         $entity->site_ref->target_id = $site->id();
       }
-      if (method_exists($entity, 'hasField') && $entity->hasField('department')) {
+      if (method_exists($entity, 'hasField') && $entity->hasField('department') && $site->hasField('department') && !$site->get('department')->isEmpty()) {
         $entity->department = $site->department;
       }
     }
